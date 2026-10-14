@@ -11,7 +11,8 @@ import java.util.List;
 public class Cenario1SemControle {
     private static int proximaConexao = 0;   // contador compartilhado e NÃO protegido (outra race condition)
 
-    public static void executar(int nRequisicoes) throws InterruptedException {
+    public static ServidorBanco executar(int nRequisicoes) throws InterruptedException {
+        proximaConexao = 0;
         Log.titulo("CENÁRIO 1 — SEM CONTROLE (" + nRequisicoes + " requisições simultâneas, limite do servidor = "
                 + ServidorBanco.LIMITE_CONEXOES + ")");
         ServidorBanco servidor = new ServidorBanco();
@@ -32,5 +33,6 @@ public class Cenario1SemControle {
         for (Thread t : threads) t.join();
 
         servidor.imprimirResumo("Cenário 1 — sem controle");
+        return servidor;
     }
 }

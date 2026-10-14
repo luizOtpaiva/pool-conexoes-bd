@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pool de conexões</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@460;560;640&family=Source+Sans+3:ital,wght@0,400;0,560;0,650;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <div class="brand">
+        <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <div>
+          <p class="eyebrow">Sistemas operacionais</p>
+          <h1>Pool de conexões</h1>
+        </div>
+      </div>
+      <p class="lede">Três conexões, muitas requisições. O painel executa a simulação Java e mostra a corrida, o semáforo e o scheduling.</p>
+    </header>
+
+    <section class="picker" aria-label="Cenários">
+      <button type="button" class="choice" data-cenario="1" aria-pressed="true">
+        <span class="kicker">Cenário 1</span>
+        <strong>Sem controle</strong>
+        <span>Vinte threads usam as conexões ao mesmo tempo. O buffer se mistura.</span>
+      </button>
+      <button type="button" class="choice" data-cenario="2" aria-pressed="false">
+        <span class="kicker">Cenário 2</span>
+        <strong>Semáforo</strong>
+        <span>Semaphore(3) segura a quarta requisição até alguém devolver a vaga.</span>
+      </button>
+      <button type="button" class="choice" data-cenario="3" aria-pressed="false">
+        <span class="kicker">Cenário 3</span>
+        <strong>Scheduling</strong>
+        <span>A vaga continua limitada. A política escolhe quem entra.</span>
+      </button>
+      <button type="button" class="choice" data-cenario="todos" aria-pressed="false">
+        <span class="kicker">Comparar</span>
+        <strong>Os três</strong>
+        <span>Roda a sequência completa e junta violação, fila e políticas.</span>
+      </button>
+    </section>
+
+    <section class="actions">
+      <button type="button" class="run" id="executar">Executar simulação</button>
+      <label class="check">
+        <input type="checkbox" id="detalhe" />
+        <span>Log de cada despacho</span>
+      </label>
+      <p class="hint" id="hint">O cenário 3 compara quatro políticas e leva cerca de quinze segundos.</p>
+    </section>
+
+    <section id="resultado" aria-live="polite">
+      <article class="welcome">
+        <div class="slots" aria-hidden="true">
+          <div><b>1</b><small>livre</small></div>
+          <div><b>2</b><small>livre</small></div>
+          <div><b>3</b><small>livre</small></div>
+        </div>
+        <div>
+          <h2>Escolha um cenário</h2>
+          <p>A simulação é a do pacote <code>poolbd</code>: threads reais, semáforo de contagem e fila de prontos. Nada aqui é um banco de dados de verdade.</p>
+        </div>
+      </article>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

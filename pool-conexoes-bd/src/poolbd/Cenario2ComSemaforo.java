@@ -10,7 +10,17 @@ import java.util.List;
  */
 public class Cenario2ComSemaforo {
 
-    public static void executar(int nRequisicoes) throws InterruptedException {
+    public static final class Saida {
+        public final ServidorBanco servidor;
+        public final Metricas.Resumo metricas;
+
+        public Saida(ServidorBanco servidor, Metricas.Resumo metricas) {
+            this.servidor = servidor;
+            this.metricas = metricas;
+        }
+    }
+
+    public static Saida executar(int nRequisicoes) throws InterruptedException {
         Log.titulo("CENÁRIO 2 — COM SEMÁFORO DE CONTAGEM Semaphore(" + ServidorBanco.LIMITE_CONEXOES + ") — "
                 + nRequisicoes + " requisições");
         ServidorBanco servidor = new ServidorBanco();
@@ -43,6 +53,8 @@ public class Cenario2ComSemaforo {
         for (Thread t : threads) t.join();
 
         servidor.imprimirResumo("Cenário 2 — Semaphore(3)");
-        Metricas.imprimir("Cenário 2", Metricas.calcular(reqs, ServidorBanco.LIMITE_CONEXOES));
+        Metricas.Resumo metricas = Metricas.calcular(reqs, ServidorBanco.LIMITE_CONEXOES);
+        Metricas.imprimir("Cenário 2", metricas);
+        return new Saida(servidor, metricas);
     }
 }

@@ -49,15 +49,21 @@ public class Cenario3ComScheduling {
         Metricas.imprimir(politica.descricao, m);
         System.out.println();
         System.out.println("Ordem em que receberam conexão (C=crítica A=alta N=normal B=baixa):");
-        System.out.println("    " + Metricas.ordem(escalonador.getOrdemDeAtendimento()));
-        return new Resumo1(m, servidor);
+        String ordem = Metricas.ordem(escalonador.getOrdemDeAtendimento());
+        System.out.println("    " + ordem);
+        return new Resumo1(m, servidor, ordem);
     }
 
     /** Pequeno agregador do resultado de uma execução. */
     public static class Resumo1 {
         public final Metricas.Resumo metricas;
         public final ServidorBanco servidor;
-        Resumo1(Metricas.Resumo m, ServidorBanco s) { this.metricas = m; this.servidor = s; }
+        public final String ordem;
+        Resumo1(Metricas.Resumo m, ServidorBanco s, String ordem) {
+            this.metricas = m;
+            this.servidor = s;
+            this.ordem = ordem;
+        }
     }
 
     public static void executarTodas() throws InterruptedException {
