@@ -1,0 +1,79 @@
+
+==============================================================================
+CENÁRIO 2 — COM SEMÁFORO DE CONTAGEM Semaphore(3) — 20 requisições
+==============================================================================
+[   40 ms] … Req#11 [CRÍTICA] PAGAMENTO  pede conexão (vagas livres agora: 3)
+[   46 ms] … Req#15 [BAIXA  ] RELATÓRIO  pede conexão (vagas livres agora: 3)
+[   46 ms] … Req#06 [NORMAL ] CONSULTA   pede conexão (vagas livres agora: 3)
+[   46 ms] … Req#08 [NORMAL ] CONSULTA   pede conexão (vagas livres agora: 3)
+[   47 ms] … Req#05 [ALTA   ] LOGIN      pede conexão (vagas livres agora: 3)
+[   47 ms] … Req#17 [ALTA   ] LOGIN      pede conexão (vagas livres agora: 0)
+[   48 ms] … Req#18 [ALTA   ] LOGIN      pede conexão (vagas livres agora: 0)
+[   49 ms] … Req#19 [CRÍTICA] PAGAMENTO  pede conexão (vagas livres agora: 0)
+[   50 ms] … Req#13 [NORMAL ] CONSULTA   pede conexão (vagas livres agora: 3)
+[   54 ms] … Req#04 [CRÍTICA] PAGAMENTO  pede conexão (vagas livres agora: 3)
+[   55 ms] … Req#03 [NORMAL ] CONSULTA   pede conexão (vagas livres agora: 3)
+[   55 ms] … Req#14 [ALTA   ] LOGIN      pede conexão (vagas livres agora: 3)
+[   58 ms] … Req#07 [NORMAL ] CONSULTA   pede conexão (vagas livres agora: 3)
+[   58 ms] … Req#12 [ALTA   ] LOGIN      pede conexão (vagas livres agora: 3)
+[   58 ms] … Req#02 [NORMAL ] CONSULTA   pede conexão (vagas livres agora: 3)
+[   58 ms] ▶ Req#11 [CRÍTICA] PAGAMENTO  executando na conexão #1 (consultas ativas no servidor: 1)
+[   59 ms] … Req#09 [NORMAL ] CONSULTA   pede conexão (vagas livres agora: 3)
+[   59 ms] … Req#10 [NORMAL ] CONSULTA   pede conexão (vagas livres agora: 3)
+[   59 ms] … Req#01 [ALTA   ] LOGIN      pede conexão (vagas livres agora: 3)
+[   59 ms] ▶ Req#05 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 3)
+[   60 ms] … Req#20 [CRÍTICA] PAGAMENTO  pede conexão (vagas livres agora: 0)
+[   62 ms] … Req#16 [ALTA   ] LOGIN      pede conexão (vagas livres agora: 2)
+[   62 ms] ▶ Req#15 [BAIXA  ] RELATÓRIO  executando na conexão #2 (consultas ativas no servidor: 2)
+[  156 ms] ■ Req#05 [ALTA   ] LOGIN      terminou na conexão #3
+[  157 ms] ▶ Req#17 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 3)
+[  183 ms] ■ Req#11 [CRÍTICA] PAGAMENTO  terminou na conexão #1
+[  183 ms] ▶ Req#18 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[  293 ms] ■ Req#17 [ALTA   ] LOGIN      terminou na conexão #3
+[  293 ms] ▶ Req#06 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[  341 ms] ■ Req#18 [ALTA   ] LOGIN      terminou na conexão #1
+[  342 ms] ▶ Req#08 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[  369 ms] ■ Req#15 [BAIXA  ] RELATÓRIO  terminou na conexão #2
+[  374 ms] ▶ Req#19 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 3)
+[  476 ms] ■ Req#06 [NORMAL ] CONSULTA   terminou na conexão #3
+[  477 ms] ▶ Req#13 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[  488 ms] ■ Req#19 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[  488 ms] ▶ Req#04 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 3)
+[  494 ms] ■ Req#08 [NORMAL ] CONSULTA   terminou na conexão #1
+[  495 ms] ▶ Req#03 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[  627 ms] ■ Req#04 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[  628 ms] ▶ Req#14 [ALTA   ] LOGIN      executando na conexão #2 (consultas ativas no servidor: 3)
+[  678 ms] ■ Req#13 [NORMAL ] CONSULTA   terminou na conexão #3
+[  679 ms] ▶ Req#07 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[  700 ms] ■ Req#03 [NORMAL ] CONSULTA   terminou na conexão #1
+[  701 ms] ▶ Req#12 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[  756 ms] ■ Req#14 [ALTA   ] LOGIN      terminou na conexão #2
+[  757 ms] ▶ Req#02 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[  812 ms] ■ Req#07 [NORMAL ] CONSULTA   terminou na conexão #3
+[  812 ms] ▶ Req#09 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[  815 ms] ■ Req#12 [ALTA   ] LOGIN      terminou na conexão #1
+[  816 ms] ▶ Req#10 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[  921 ms] ■ Req#02 [NORMAL ] CONSULTA   terminou na conexão #2
+[  922 ms] ▶ Req#01 [ALTA   ] LOGIN      executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1023 ms] ■ Req#09 [NORMAL ] CONSULTA   terminou na conexão #3
+[ 1023 ms] ▶ Req#20 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1025 ms] ■ Req#10 [NORMAL ] CONSULTA   terminou na conexão #1
+[ 1026 ms] ▶ Req#16 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1046 ms] ■ Req#01 [ALTA   ] LOGIN      terminou na conexão #2
+[ 1122 ms] ■ Req#16 [ALTA   ] LOGIN      terminou na conexão #1
+[ 1167 ms] ■ Req#20 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+
+--- Resumo (Cenário 2 — Semaphore(3)) ---
+Limite do servidor ................ 3 conexões simultâneas
+Pico de consultas simultâneas ..... 3
+Estouros do limite ................ 0
+Colisões (2+ threads na mesma conexão) 0
+Resultados corrompidos/misturados . 0
+Veredito: ✔ seção crítica protegida — nenhuma violação.
+
+--- Métricas (Cenário 2) ---
+Tempo total (makespan) .......... 1164 ms
+Throughput ...................... 17.2 req/s
+Utilização das conexões ......... 91.6 %
+Espera média / máxima ........... 485 ms / 979 ms
+Turnaround médio ................ 645 ms

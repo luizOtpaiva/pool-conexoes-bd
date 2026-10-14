@@ -1,0 +1,583 @@
+
+==============================================================================
+CENÁRIO 3 — política: FCFS (ordem de chegada)
+==============================================================================
+[   43 ms] ＋ Req#01 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[   61 ms] ➜ DESPACHO Req#01 [BAIXA  ] RELATÓRIO  espera=38ms  (restam 0 na fila)
+[   62 ms] ＋ Req#06 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[   62 ms] ＋ Req#05 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 2)
+[   62 ms] ＋ Req#04 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 3)
+[   63 ms] ＋ Req#03 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 4)
+[   63 ms] ＋ Req#02 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 5)
+[   66 ms] ➜ DESPACHO Req#06 [BAIXA  ] RELATÓRIO  espera=1ms  (restam 4 na fila)
+[   68 ms] ➜ DESPACHO Req#05 [BAIXA  ] RELATÓRIO  espera=6ms  (restam 3 na fila)
+[   68 ms] ＋ Req#07 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 4)
+[   71 ms] ▶ Req#05 [BAIXA  ] RELATÓRIO  executando na conexão #3 (consultas ativas no servidor: 3)
+[   72 ms] ▶ Req#06 [BAIXA  ] RELATÓRIO  executando na conexão #2 (consultas ativas no servidor: 2)
+[   72 ms] ▶ Req#01 [BAIXA  ] RELATÓRIO  executando na conexão #1 (consultas ativas no servidor: 1)
+[  108 ms] ＋ Req#08 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 5)
+[  149 ms] ＋ Req#09 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 6)
+[  189 ms] ＋ Req#10 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 7)
+[  229 ms] ＋ Req#11 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 8)
+[  269 ms] ＋ Req#12 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 9)
+[  309 ms] ＋ Req#13 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 10)
+[  349 ms] ＋ Req#14 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  390 ms] ＋ Req#15 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 12)
+[  430 ms] ＋ Req#16 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 13)
+[  450 ms] ■ Req#01 [BAIXA  ] RELATÓRIO  terminou na conexão #1
+[  451 ms] ➜ DESPACHO Req#04 [BAIXA  ] RELATÓRIO  espera=388ms  (restam 12 na fila)
+[  451 ms] ▶ Req#04 [BAIXA  ] RELATÓRIO  executando na conexão #1 (consultas ativas no servidor: 3)
+[  466 ms] ■ Req#06 [BAIXA  ] RELATÓRIO  terminou na conexão #2
+[  467 ms] ➜ DESPACHO Req#03 [BAIXA  ] RELATÓRIO  espera=404ms  (restam 11 na fila)
+[  468 ms] ▶ Req#03 [BAIXA  ] RELATÓRIO  executando na conexão #2 (consultas ativas no servidor: 3)
+[  470 ms] ＋ Req#17 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 12)
+[  472 ms] ■ Req#05 [BAIXA  ] RELATÓRIO  terminou na conexão #3
+[  472 ms] ➜ DESPACHO Req#02 [BAIXA  ] RELATÓRIO  espera=409ms  (restam 11 na fila)
+[  473 ms] ▶ Req#02 [BAIXA  ] RELATÓRIO  executando na conexão #3 (consultas ativas no servidor: 3)
+[  510 ms] ＋ Req#18 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 12)
+[  550 ms] ＋ Req#19 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 13)
+[  590 ms] ＋ Req#20 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 14)
+[  630 ms] ＋ Req#21 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 15)
+[  671 ms] ＋ Req#22 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 16)
+[  711 ms] ＋ Req#23 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 17)
+[  751 ms] ＋ Req#24 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 18)
+[  756 ms] ■ Req#04 [BAIXA  ] RELATÓRIO  terminou na conexão #1
+[  758 ms] ➜ DESPACHO Req#07 [NORMAL ] CONSULTA   espera=689ms  (restam 17 na fila)
+[  758 ms] ▶ Req#07 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[  791 ms] ＋ Req#25 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 18)
+[  813 ms] ■ Req#03 [BAIXA  ] RELATÓRIO  terminou na conexão #2
+[  814 ms] ➜ DESPACHO Req#08 [NORMAL ] CONSULTA   espera=705ms  (restam 17 na fila)
+[  814 ms] ▶ Req#08 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[  817 ms] ■ Req#02 [BAIXA  ] RELATÓRIO  terminou na conexão #3
+[  818 ms] ➜ DESPACHO Req#09 [CRÍTICA] PAGAMENTO  espera=670ms  (restam 16 na fila)
+[  818 ms] ▶ Req#09 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[  832 ms] ＋ Req#26 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 17)
+[  872 ms] ＋ Req#27 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 18)
+[  912 ms] ＋ Req#28 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 19)
+[  951 ms] ■ Req#09 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[  952 ms] ＋ Req#29 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 20)
+[  952 ms] ➜ DESPACHO Req#10 [CRÍTICA] PAGAMENTO  espera=764ms  (restam 19 na fila)
+[  953 ms] ▶ Req#10 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[  968 ms] ■ Req#07 [NORMAL ] CONSULTA   terminou na conexão #1
+[  969 ms] ➜ DESPACHO Req#11 [NORMAL ] CONSULTA   espera=739ms  (restam 18 na fila)
+[  969 ms] ▶ Req#11 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[  989 ms] ■ Req#08 [NORMAL ] CONSULTA   terminou na conexão #2
+[  989 ms] ➜ DESPACHO Req#12 [NORMAL ] CONSULTA   espera=720ms  (restam 17 na fila)
+[  990 ms] ▶ Req#12 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[  992 ms] ＋ Req#30 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 18)
+[ 1085 ms] ■ Req#10 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[ 1086 ms] ➜ DESPACHO Req#13 [CRÍTICA] PAGAMENTO  espera=776ms  (restam 17 na fila)
+[ 1087 ms] ▶ Req#13 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1112 ms] ■ Req#11 [NORMAL ] CONSULTA   terminou na conexão #1
+[ 1112 ms] ➜ DESPACHO Req#14 [ALTA   ] LOGIN      espera=763ms  (restam 16 na fila)
+[ 1113 ms] ▶ Req#14 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1129 ms] ■ Req#12 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1129 ms] ➜ DESPACHO Req#15 [NORMAL ] CONSULTA   espera=740ms  (restam 15 na fila)
+[ 1129 ms] ▶ Req#15 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1227 ms] ■ Req#13 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[ 1227 ms] ➜ DESPACHO Req#16 [CRÍTICA] PAGAMENTO  espera=798ms  (restam 14 na fila)
+[ 1228 ms] ▶ Req#16 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1267 ms] ■ Req#14 [ALTA   ] LOGIN      terminou na conexão #1
+[ 1268 ms] ➜ DESPACHO Req#17 [ALTA   ] LOGIN      espera=798ms  (restam 13 na fila)
+[ 1268 ms] ▶ Req#17 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1333 ms] ■ Req#16 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[ 1334 ms] ➜ DESPACHO Req#18 [NORMAL ] CONSULTA   espera=823ms  (restam 12 na fila)
+[ 1334 ms] ▶ Req#18 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1341 ms] ■ Req#15 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1341 ms] ➜ DESPACHO Req#19 [ALTA   ] LOGIN      espera=791ms  (restam 11 na fila)
+[ 1342 ms] ▶ Req#19 [ALTA   ] LOGIN      executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1409 ms] ■ Req#17 [ALTA   ] LOGIN      terminou na conexão #1
+[ 1410 ms] ➜ DESPACHO Req#20 [NORMAL ] CONSULTA   espera=819ms  (restam 10 na fila)
+[ 1410 ms] ▶ Req#20 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1458 ms] ■ Req#19 [ALTA   ] LOGIN      terminou na conexão #2
+[ 1460 ms] ➜ DESPACHO Req#21 [ALTA   ] LOGIN      espera=830ms  (restam 9 na fila)
+[ 1461 ms] ▶ Req#21 [ALTA   ] LOGIN      executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1466 ms] ■ Req#18 [NORMAL ] CONSULTA   terminou na conexão #3
+[ 1466 ms] ➜ DESPACHO Req#22 [CRÍTICA] PAGAMENTO  espera=796ms  (restam 8 na fila)
+[ 1466 ms] ▶ Req#22 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1581 ms] ■ Req#20 [NORMAL ] CONSULTA   terminou na conexão #1
+[ 1582 ms] ➜ DESPACHO Req#23 [ALTA   ] LOGIN      espera=871ms  (restam 7 na fila)
+[ 1582 ms] ▶ Req#23 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1593 ms] ■ Req#21 [ALTA   ] LOGIN      terminou na conexão #2
+[ 1594 ms] ➜ DESPACHO Req#24 [ALTA   ] LOGIN      espera=843ms  (restam 6 na fila)
+[ 1594 ms] ▶ Req#24 [ALTA   ] LOGIN      executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1633 ms] ■ Req#22 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[ 1633 ms] ➜ DESPACHO Req#25 [NORMAL ] CONSULTA   espera=842ms  (restam 5 na fila)
+[ 1635 ms] ▶ Req#25 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1687 ms] ■ Req#23 [ALTA   ] LOGIN      terminou na conexão #1
+[ 1687 ms] ➜ DESPACHO Req#26 [ALTA   ] LOGIN      espera=856ms  (restam 4 na fila)
+[ 1689 ms] ▶ Req#26 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1725 ms] ■ Req#24 [ALTA   ] LOGIN      terminou na conexão #2
+[ 1725 ms] ➜ DESPACHO Req#27 [CRÍTICA] PAGAMENTO  espera=853ms  (restam 3 na fila)
+[ 1726 ms] ▶ Req#27 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1795 ms] ■ Req#26 [ALTA   ] LOGIN      terminou na conexão #1
+[ 1795 ms] ➜ DESPACHO Req#28 [NORMAL ] CONSULTA   espera=883ms  (restam 2 na fila)
+[ 1796 ms] ▶ Req#28 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1843 ms] ■ Req#25 [NORMAL ] CONSULTA   terminou na conexão #3
+[ 1843 ms] ➜ DESPACHO Req#29 [CRÍTICA] PAGAMENTO  espera=891ms  (restam 1 na fila)
+[ 1844 ms] ▶ Req#29 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1875 ms] ■ Req#27 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[ 1877 ms] ➜ DESPACHO Req#30 [NORMAL ] CONSULTA   espera=885ms  (restam 0 na fila)
+[ 1877 ms] ▶ Req#30 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1928 ms] ■ Req#28 [NORMAL ] CONSULTA   terminou na conexão #1
+[ 1990 ms] ■ Req#29 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[ 2048 ms] ■ Req#30 [NORMAL ] CONSULTA   terminou na conexão #2
+
+--- Resumo (Cenário 3 — FCFS (ordem de chegada)) ---
+Limite do servidor ................ 3 conexões simultâneas
+Pico de consultas simultâneas ..... 3
+Estouros do limite ................ 0
+Colisões (2+ threads na mesma conexão) 0
+Resultados corrompidos/misturados . 0
+Veredito: ✔ seção crítica protegida — nenhuma violação.
+
+--- Métricas (FCFS (ordem de chegada)) ---
+Tempo total (makespan) .......... 2042 ms
+Throughput ...................... 14.7 req/s
+Utilização das conexões ......... 94.4 %
+Espera média / máxima ........... 680 ms / 891 ms
+Turnaround médio ................ 873 ms
+
+Ordem em que receberam conexão (C=crítica A=alta N=normal B=baixa):
+    #01B #06B #05B #04B #03B #02B #07N #08N #09C #10C #11N #12N #13C #14A #15N 
+    #16C #17A #18N #19A #20N #21A #22C #23A #24A #25N #26A #27C #28N #29C #30N
+
+==============================================================================
+CENÁRIO 3 — política: Prioridade estática
+==============================================================================
+[    0 ms] ＋ Req#01 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[    5 ms] ➜ DESPACHO Req#01 [BAIXA  ] RELATÓRIO  espera=0ms  (restam 0 na fila)
+[    5 ms] ▶ Req#01 [BAIXA  ] RELATÓRIO  executando na conexão #1 (consultas ativas no servidor: 1)
+[   11 ms] ＋ Req#02 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[   11 ms] ➜ DESPACHO Req#02 [BAIXA  ] RELATÓRIO  espera=1ms  (restam 0 na fila)
+[   11 ms] ▶ Req#02 [BAIXA  ] RELATÓRIO  executando na conexão #2 (consultas ativas no servidor: 2)
+[   23 ms] ＋ Req#03 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[   23 ms] ➜ DESPACHO Req#03 [BAIXA  ] RELATÓRIO  espera=0ms  (restam 0 na fila)
+[   24 ms] ▶ Req#03 [BAIXA  ] RELATÓRIO  executando na conexão #3 (consultas ativas no servidor: 3)
+[   36 ms] ＋ Req#04 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[   46 ms] ＋ Req#05 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 2)
+[   55 ms] ＋ Req#06 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 3)
+[   65 ms] ＋ Req#07 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 4)
+[  105 ms] ＋ Req#08 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 5)
+[  145 ms] ＋ Req#09 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 6)
+[  185 ms] ＋ Req#10 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 7)
+[  226 ms] ＋ Req#11 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 8)
+[  266 ms] ＋ Req#12 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 9)
+[  306 ms] ＋ Req#13 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 10)
+[  347 ms] ＋ Req#14 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  356 ms] ■ Req#02 [BAIXA  ] RELATÓRIO  terminou na conexão #2
+[  356 ms] ➜ DESPACHO Req#09 [CRÍTICA] PAGAMENTO  espera=211ms  (restam 10 na fila)
+[  356 ms] ▶ Req#09 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 3)
+[  369 ms] ■ Req#03 [BAIXA  ] RELATÓRIO  terminou na conexão #3
+[  370 ms] ➜ DESPACHO Req#10 [CRÍTICA] PAGAMENTO  espera=184ms  (restam 9 na fila)
+[  370 ms] ▶ Req#10 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[  382 ms] ■ Req#01 [BAIXA  ] RELATÓRIO  terminou na conexão #1
+[  382 ms] ➜ DESPACHO Req#13 [CRÍTICA] PAGAMENTO  espera=76ms  (restam 8 na fila)
+[  383 ms] ▶ Req#13 [CRÍTICA] PAGAMENTO  executando na conexão #1 (consultas ativas no servidor: 3)
+[  386 ms] ＋ Req#15 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 9)
+[  426 ms] ＋ Req#16 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 10)
+[  467 ms] ＋ Req#17 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  489 ms] ■ Req#09 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[  489 ms] ➜ DESPACHO Req#16 [CRÍTICA] PAGAMENTO  espera=63ms  (restam 10 na fila)
+[  489 ms] ▶ Req#16 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 3)
+[  501 ms] ■ Req#10 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[  501 ms] ➜ DESPACHO Req#14 [ALTA   ] LOGIN      espera=155ms  (restam 9 na fila)
+[  502 ms] ▶ Req#14 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 3)
+[  507 ms] ＋ Req#18 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 10)
+[  522 ms] ■ Req#13 [CRÍTICA] PAGAMENTO  terminou na conexão #1
+[  523 ms] ➜ DESPACHO Req#17 [ALTA   ] LOGIN      espera=57ms  (restam 9 na fila)
+[  523 ms] ▶ Req#17 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[  547 ms] ＋ Req#19 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 10)
+[  587 ms] ＋ Req#20 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 11)
+[  594 ms] ■ Req#16 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[  594 ms] ➜ DESPACHO Req#19 [ALTA   ] LOGIN      espera=48ms  (restam 10 na fila)
+[  594 ms] ▶ Req#19 [ALTA   ] LOGIN      executando na conexão #2 (consultas ativas no servidor: 3)
+[  627 ms] ＋ Req#21 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  656 ms] ■ Req#14 [ALTA   ] LOGIN      terminou na conexão #3
+[  656 ms] ➜ DESPACHO Req#21 [ALTA   ] LOGIN      espera=29ms  (restam 10 na fila)
+[  656 ms] ▶ Req#21 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 3)
+[  663 ms] ■ Req#17 [ALTA   ] LOGIN      terminou na conexão #1
+[  667 ms] ＋ Req#22 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 11)
+[  668 ms] ➜ DESPACHO Req#22 [CRÍTICA] PAGAMENTO  espera=0ms  (restam 10 na fila)
+[  668 ms] ▶ Req#22 [CRÍTICA] PAGAMENTO  executando na conexão #1 (consultas ativas no servidor: 3)
+[  698 ms] ■ Req#19 [ALTA   ] LOGIN      terminou na conexão #2
+[  698 ms] ➜ DESPACHO Req#07 [NORMAL ] CONSULTA   espera=633ms  (restam 9 na fila)
+[  698 ms] ▶ Req#07 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[  708 ms] ＋ Req#23 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 10)
+[  747 ms] ＋ Req#24 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  787 ms] ＋ Req#25 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 12)
+[  789 ms] ■ Req#21 [ALTA   ] LOGIN      terminou na conexão #3
+[  789 ms] ➜ DESPACHO Req#23 [ALTA   ] LOGIN      espera=82ms  (restam 11 na fila)
+[  789 ms] ▶ Req#23 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 3)
+[  828 ms] ＋ Req#26 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 12)
+[  835 ms] ■ Req#22 [CRÍTICA] PAGAMENTO  terminou na conexão #1
+[  835 ms] ➜ DESPACHO Req#24 [ALTA   ] LOGIN      espera=88ms  (restam 11 na fila)
+[  836 ms] ▶ Req#24 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[  868 ms] ＋ Req#27 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 12)
+[  894 ms] ■ Req#23 [ALTA   ] LOGIN      terminou na conexão #3
+[  894 ms] ➜ DESPACHO Req#27 [CRÍTICA] PAGAMENTO  espera=27ms  (restam 11 na fila)
+[  894 ms] ▶ Req#27 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[  908 ms] ■ Req#07 [NORMAL ] CONSULTA   terminou na conexão #2
+[  908 ms] ＋ Req#28 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 12)
+[  909 ms] ➜ DESPACHO Req#26 [ALTA   ] LOGIN      espera=81ms  (restam 11 na fila)
+[  909 ms] ▶ Req#26 [ALTA   ] LOGIN      executando na conexão #2 (consultas ativas no servidor: 3)
+[  948 ms] ＋ Req#29 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 12)
+[  966 ms] ■ Req#24 [ALTA   ] LOGIN      terminou na conexão #1
+[  966 ms] ➜ DESPACHO Req#29 [CRÍTICA] PAGAMENTO  espera=18ms  (restam 11 na fila)
+[  967 ms] ▶ Req#29 [CRÍTICA] PAGAMENTO  executando na conexão #1 (consultas ativas no servidor: 3)
+[  988 ms] ＋ Req#30 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 12)
+[ 1014 ms] ■ Req#26 [ALTA   ] LOGIN      terminou na conexão #2
+[ 1015 ms] ➜ DESPACHO Req#08 [NORMAL ] CONSULTA   espera=910ms  (restam 11 na fila)
+[ 1015 ms] ▶ Req#08 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1045 ms] ■ Req#27 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[ 1045 ms] ➜ DESPACHO Req#11 [NORMAL ] CONSULTA   espera=820ms  (restam 10 na fila)
+[ 1045 ms] ▶ Req#11 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1112 ms] ■ Req#29 [CRÍTICA] PAGAMENTO  terminou na conexão #1
+[ 1113 ms] ➜ DESPACHO Req#12 [NORMAL ] CONSULTA   espera=846ms  (restam 9 na fila)
+[ 1113 ms] ▶ Req#12 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1188 ms] ■ Req#11 [NORMAL ] CONSULTA   terminou na conexão #3
+[ 1188 ms] ➜ DESPACHO Req#15 [NORMAL ] CONSULTA   espera=802ms  (restam 8 na fila)
+[ 1188 ms] ▶ Req#15 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1189 ms] ■ Req#08 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1190 ms] ➜ DESPACHO Req#18 [NORMAL ] CONSULTA   espera=684ms  (restam 7 na fila)
+[ 1190 ms] ▶ Req#18 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1251 ms] ■ Req#12 [NORMAL ] CONSULTA   terminou na conexão #1
+[ 1252 ms] ➜ DESPACHO Req#20 [NORMAL ] CONSULTA   espera=665ms  (restam 6 na fila)
+[ 1252 ms] ▶ Req#20 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1323 ms] ■ Req#18 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1324 ms] ➜ DESPACHO Req#25 [NORMAL ] CONSULTA   espera=536ms  (restam 5 na fila)
+[ 1324 ms] ▶ Req#25 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1399 ms] ■ Req#15 [NORMAL ] CONSULTA   terminou na conexão #3
+[ 1400 ms] ➜ DESPACHO Req#28 [NORMAL ] CONSULTA   espera=492ms  (restam 4 na fila)
+[ 1400 ms] ▶ Req#28 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1423 ms] ■ Req#20 [NORMAL ] CONSULTA   terminou na conexão #1
+[ 1423 ms] ➜ DESPACHO Req#30 [NORMAL ] CONSULTA   espera=435ms  (restam 3 na fila)
+[ 1424 ms] ▶ Req#30 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1531 ms] ■ Req#25 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1531 ms] ➜ DESPACHO Req#04 [BAIXA  ] RELATÓRIO  espera=1498ms  (restam 2 na fila)
+[ 1531 ms] ▶ Req#04 [BAIXA  ] RELATÓRIO  executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1532 ms] ■ Req#28 [NORMAL ] CONSULTA   terminou na conexão #3
+[ 1532 ms] ➜ DESPACHO Req#05 [BAIXA  ] RELATÓRIO  espera=1487ms  (restam 1 na fila)
+[ 1533 ms] ▶ Req#05 [BAIXA  ] RELATÓRIO  executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1594 ms] ■ Req#30 [NORMAL ] CONSULTA   terminou na conexão #1
+[ 1594 ms] ➜ DESPACHO Req#06 [BAIXA  ] RELATÓRIO  espera=1540ms  (restam 0 na fila)
+[ 1594 ms] ▶ Req#06 [BAIXA  ] RELATÓRIO  executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1836 ms] ■ Req#04 [BAIXA  ] RELATÓRIO  terminou na conexão #2
+[ 1933 ms] ■ Req#05 [BAIXA  ] RELATÓRIO  terminou na conexão #3
+[ 1989 ms] ■ Req#06 [BAIXA  ] RELATÓRIO  terminou na conexão #1
+
+--- Resumo (Cenário 3 — Prioridade estática) ---
+Limite do servidor ................ 3 conexões simultâneas
+Pico de consultas simultâneas ..... 3
+Estouros do limite ................ 0
+Colisões (2+ threads na mesma conexão) 0
+Resultados corrompidos/misturados . 0
+Veredito: ✔ seção crítica protegida — nenhuma violação.
+
+--- Métricas (Prioridade estática) ---
+Tempo total (makespan) .......... 1989 ms
+Throughput ...................... 15.1 req/s
+Utilização das conexões ......... 95.9 %
+Espera média / máxima ........... 416 ms / 1540 ms
+Turnaround médio ................ 606 ms
+
+Ordem em que receberam conexão (C=crítica A=alta N=normal B=baixa):
+    #01B #02B #03B #09C #10C #13C #16C #14A #17A #19A #21A #22C #07N #23A #24A 
+    #27C #26A #29C #08N #11N #12N #15N #18N #20N #25N #28N #30N #04B #05B #06B
+
+==============================================================================
+CENÁRIO 3 — política: SJF (consulta mais curta primeiro)
+==============================================================================
+[    0 ms] ＋ Req#01 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[    2 ms] ➜ DESPACHO Req#01 [BAIXA  ] RELATÓRIO  espera=0ms  (restam 0 na fila)
+[    2 ms] ▶ Req#01 [BAIXA  ] RELATÓRIO  executando na conexão #1 (consultas ativas no servidor: 1)
+[   11 ms] ＋ Req#02 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[   11 ms] ➜ DESPACHO Req#02 [BAIXA  ] RELATÓRIO  espera=0ms  (restam 0 na fila)
+[   11 ms] ▶ Req#02 [BAIXA  ] RELATÓRIO  executando na conexão #2 (consultas ativas no servidor: 2)
+[   21 ms] ＋ Req#03 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[   22 ms] ➜ DESPACHO Req#03 [BAIXA  ] RELATÓRIO  espera=1ms  (restam 0 na fila)
+[   22 ms] ▶ Req#03 [BAIXA  ] RELATÓRIO  executando na conexão #3 (consultas ativas no servidor: 3)
+[   32 ms] ＋ Req#04 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[   42 ms] ＋ Req#05 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 2)
+[   52 ms] ＋ Req#06 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 3)
+[   62 ms] ＋ Req#07 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 4)
+[  102 ms] ＋ Req#08 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 5)
+[  142 ms] ＋ Req#09 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 6)
+[  182 ms] ＋ Req#10 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 7)
+[  223 ms] ＋ Req#11 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 8)
+[  263 ms] ＋ Req#12 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 9)
+[  303 ms] ＋ Req#13 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 10)
+[  343 ms] ＋ Req#14 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  356 ms] ■ Req#02 [BAIXA  ] RELATÓRIO  terminou na conexão #2
+[  356 ms] ➜ DESPACHO Req#10 [CRÍTICA] PAGAMENTO  espera=174ms  (restam 10 na fila)
+[  356 ms] ▶ Req#10 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 3)
+[  367 ms] ■ Req#03 [BAIXA  ] RELATÓRIO  terminou na conexão #3
+[  367 ms] ➜ DESPACHO Req#09 [CRÍTICA] PAGAMENTO  espera=225ms  (restam 9 na fila)
+[  368 ms] ▶ Req#09 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[  378 ms] ■ Req#01 [BAIXA  ] RELATÓRIO  terminou na conexão #1
+[  379 ms] ➜ DESPACHO Req#12 [NORMAL ] CONSULTA   espera=116ms  (restam 8 na fila)
+[  379 ms] ▶ Req#12 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[  383 ms] ＋ Req#15 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 9)
+[  423 ms] ＋ Req#16 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 10)
+[  463 ms] ＋ Req#17 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  487 ms] ■ Req#10 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[  488 ms] ➜ DESPACHO Req#16 [CRÍTICA] PAGAMENTO  espera=65ms  (restam 10 na fila)
+[  488 ms] ▶ Req#16 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 3)
+[  500 ms] ■ Req#09 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[  500 ms] ➜ DESPACHO Req#13 [CRÍTICA] PAGAMENTO  espera=197ms  (restam 9 na fila)
+[  500 ms] ▶ Req#13 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[  503 ms] ＋ Req#18 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 10)
+[  517 ms] ■ Req#12 [NORMAL ] CONSULTA   terminou na conexão #1
+[  517 ms] ➜ DESPACHO Req#18 [NORMAL ] CONSULTA   espera=14ms  (restam 9 na fila)
+[  517 ms] ▶ Req#18 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[  543 ms] ＋ Req#19 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 10)
+[  584 ms] ＋ Req#20 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 11)
+[  592 ms] ■ Req#16 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[  593 ms] ➜ DESPACHO Req#19 [ALTA   ] LOGIN      espera=50ms  (restam 10 na fila)
+[  593 ms] ▶ Req#19 [ALTA   ] LOGIN      executando na conexão #2 (consultas ativas no servidor: 3)
+[  624 ms] ＋ Req#21 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  640 ms] ■ Req#13 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[  640 ms] ➜ DESPACHO Req#21 [ALTA   ] LOGIN      espera=17ms  (restam 10 na fila)
+[  640 ms] ▶ Req#21 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 3)
+[  649 ms] ■ Req#18 [NORMAL ] CONSULTA   terminou na conexão #1
+[  649 ms] ➜ DESPACHO Req#17 [ALTA   ] LOGIN      espera=186ms  (restam 9 na fila)
+[  649 ms] ▶ Req#17 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[  664 ms] ＋ Req#22 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 10)
+[  696 ms] ■ Req#19 [ALTA   ] LOGIN      terminou na conexão #2
+[  697 ms] ➜ DESPACHO Req#11 [NORMAL ] CONSULTA   espera=475ms  (restam 9 na fila)
+[  697 ms] ▶ Req#11 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[  704 ms] ＋ Req#23 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 10)
+[  744 ms] ＋ Req#24 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  773 ms] ■ Req#21 [ALTA   ] LOGIN      terminou na conexão #3
+[  773 ms] ➜ DESPACHO Req#23 [ALTA   ] LOGIN      espera=69ms  (restam 10 na fila)
+[  773 ms] ▶ Req#23 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 3)
+[  784 ms] ＋ Req#25 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 11)
+[  789 ms] ■ Req#17 [ALTA   ] LOGIN      terminou na conexão #1
+[  790 ms] ➜ DESPACHO Req#24 [ALTA   ] LOGIN      espera=46ms  (restam 10 na fila)
+[  790 ms] ▶ Req#24 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[  824 ms] ＋ Req#26 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  839 ms] ■ Req#11 [NORMAL ] CONSULTA   terminou na conexão #2
+[  840 ms] ➜ DESPACHO Req#26 [ALTA   ] LOGIN      espera=15ms  (restam 10 na fila)
+[  840 ms] ▶ Req#26 [ALTA   ] LOGIN      executando na conexão #2 (consultas ativas no servidor: 3)
+[  864 ms] ＋ Req#27 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 11)
+[  877 ms] ■ Req#23 [ALTA   ] LOGIN      terminou na conexão #3
+[  878 ms] ➜ DESPACHO Req#27 [CRÍTICA] PAGAMENTO  espera=14ms  (restam 10 na fila)
+[  878 ms] ▶ Req#27 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[  904 ms] ＋ Req#28 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 11)
+[  920 ms] ■ Req#24 [ALTA   ] LOGIN      terminou na conexão #1
+[  921 ms] ➜ DESPACHO Req#28 [NORMAL ] CONSULTA   espera=17ms  (restam 10 na fila)
+[  921 ms] ▶ Req#28 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[  944 ms] ＋ Req#29 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 11)
+[  945 ms] ■ Req#26 [ALTA   ] LOGIN      terminou na conexão #2
+[  945 ms] ➜ DESPACHO Req#29 [CRÍTICA] PAGAMENTO  espera=1ms  (restam 10 na fila)
+[  946 ms] ▶ Req#29 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 3)
+[  984 ms] ＋ Req#30 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 11)
+[ 1027 ms] ■ Req#27 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[ 1028 ms] ➜ DESPACHO Req#14 [ALTA   ] LOGIN      espera=685ms  (restam 10 na fila)
+[ 1028 ms] ▶ Req#14 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1053 ms] ■ Req#28 [NORMAL ] CONSULTA   terminou na conexão #1
+[ 1054 ms] ➜ DESPACHO Req#22 [CRÍTICA] PAGAMENTO  espera=390ms  (restam 9 na fila)
+[ 1054 ms] ▶ Req#22 [CRÍTICA] PAGAMENTO  executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1091 ms] ■ Req#29 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[ 1091 ms] ➜ DESPACHO Req#30 [NORMAL ] CONSULTA   espera=107ms  (restam 8 na fila)
+[ 1091 ms] ▶ Req#30 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1182 ms] ■ Req#14 [ALTA   ] LOGIN      terminou na conexão #3
+[ 1183 ms] ➜ DESPACHO Req#20 [NORMAL ] CONSULTA   espera=600ms  (restam 7 na fila)
+[ 1183 ms] ▶ Req#20 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1221 ms] ■ Req#22 [CRÍTICA] PAGAMENTO  terminou na conexão #1
+[ 1221 ms] ➜ DESPACHO Req#08 [NORMAL ] CONSULTA   espera=1119ms  (restam 6 na fila)
+[ 1221 ms] ▶ Req#08 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1262 ms] ■ Req#30 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1262 ms] ➜ DESPACHO Req#25 [NORMAL ] CONSULTA   espera=478ms  (restam 5 na fila)
+[ 1263 ms] ▶ Req#25 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1354 ms] ■ Req#20 [NORMAL ] CONSULTA   terminou na conexão #3
+[ 1354 ms] ➜ DESPACHO Req#07 [NORMAL ] CONSULTA   espera=1292ms  (restam 4 na fila)
+[ 1355 ms] ▶ Req#07 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1396 ms] ■ Req#08 [NORMAL ] CONSULTA   terminou na conexão #1
+[ 1396 ms] ➜ DESPACHO Req#15 [NORMAL ] CONSULTA   espera=1013ms  (restam 3 na fila)
+[ 1396 ms] ▶ Req#15 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1470 ms] ■ Req#25 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1471 ms] ➜ DESPACHO Req#04 [BAIXA  ] RELATÓRIO  espera=1440ms  (restam 2 na fila)
+[ 1471 ms] ▶ Req#04 [BAIXA  ] RELATÓRIO  executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1564 ms] ■ Req#07 [NORMAL ] CONSULTA   terminou na conexão #3
+[ 1564 ms] ➜ DESPACHO Req#06 [BAIXA  ] RELATÓRIO  espera=1512ms  (restam 1 na fila)
+[ 1565 ms] ▶ Req#06 [BAIXA  ] RELATÓRIO  executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1608 ms] ■ Req#15 [NORMAL ] CONSULTA   terminou na conexão #1
+[ 1608 ms] ➜ DESPACHO Req#05 [BAIXA  ] RELATÓRIO  espera=1567ms  (restam 0 na fila)
+[ 1608 ms] ▶ Req#05 [BAIXA  ] RELATÓRIO  executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1775 ms] ■ Req#04 [BAIXA  ] RELATÓRIO  terminou na conexão #2
+[ 1959 ms] ■ Req#06 [BAIXA  ] RELATÓRIO  terminou na conexão #3
+[ 2008 ms] ■ Req#05 [BAIXA  ] RELATÓRIO  terminou na conexão #1
+
+--- Resumo (Cenário 3 — SJF (consulta mais curta primeiro)) ---
+Limite do servidor ................ 3 conexões simultâneas
+Pico de consultas simultâneas ..... 3
+Estouros do limite ................ 0
+Colisões (2+ threads na mesma conexão) 0
+Resultados corrompidos/misturados . 0
+Veredito: ✔ seção crítica protegida — nenhuma violação.
+
+--- Métricas (SJF (consulta mais curta primeiro)) ---
+Tempo total (makespan) .......... 2009 ms
+Throughput ...................... 14.9 req/s
+Utilização das conexões ......... 94.7 %
+Espera média / máxima ........... 396 ms / 1567 ms
+Turnaround médio ................ 586 ms
+
+Ordem em que receberam conexão (C=crítica A=alta N=normal B=baixa):
+    #01B #02B #03B #10C #09C #12N #16C #13C #18N #19A #21A #17A #11N #23A #24A 
+    #26A #27C #28N #29C #14A #22C #30N #20N #08N #25N #07N #15N #04B #06B #05B
+
+==============================================================================
+CENÁRIO 3 — política: Prioridade + envelhecimento (aging)
+==============================================================================
+[    0 ms] ＋ Req#01 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[    2 ms] ➜ DESPACHO Req#01 [BAIXA  ] RELATÓRIO  espera=0ms  (restam 0 na fila)
+[    3 ms] ▶ Req#01 [BAIXA  ] RELATÓRIO  executando na conexão #1 (consultas ativas no servidor: 1)
+[   11 ms] ＋ Req#02 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[   11 ms] ➜ DESPACHO Req#02 [BAIXA  ] RELATÓRIO  espera=0ms  (restam 0 na fila)
+[   11 ms] ▶ Req#02 [BAIXA  ] RELATÓRIO  executando na conexão #2 (consultas ativas no servidor: 2)
+[   21 ms] ＋ Req#03 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[   21 ms] ➜ DESPACHO Req#03 [BAIXA  ] RELATÓRIO  espera=0ms  (restam 0 na fila)
+[   22 ms] ▶ Req#03 [BAIXA  ] RELATÓRIO  executando na conexão #3 (consultas ativas no servidor: 3)
+[   31 ms] ＋ Req#04 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 1)
+[   43 ms] ＋ Req#05 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 2)
+[   54 ms] ＋ Req#06 [BAIXA  ] RELATÓRIO  chegou à fila (tamanho da fila: 3)
+[   64 ms] ＋ Req#07 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 4)
+[  104 ms] ＋ Req#08 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 5)
+[  144 ms] ＋ Req#09 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 6)
+[  184 ms] ＋ Req#10 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 7)
+[  224 ms] ＋ Req#11 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 8)
+[  264 ms] ＋ Req#12 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 9)
+[  304 ms] ＋ Req#13 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 10)
+[  346 ms] ＋ Req#14 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  356 ms] ■ Req#02 [BAIXA  ] RELATÓRIO  terminou na conexão #2
+[  356 ms] ➜ DESPACHO Req#09 [CRÍTICA] PAGAMENTO  espera=212ms  (restam 10 na fila)
+[  356 ms] ▶ Req#09 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 3)
+[  367 ms] ■ Req#03 [BAIXA  ] RELATÓRIO  terminou na conexão #3
+[  367 ms] ➜ DESPACHO Req#10 [CRÍTICA] PAGAMENTO  espera=183ms  (restam 9 na fila)
+[  367 ms] ▶ Req#10 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[  379 ms] ■ Req#01 [BAIXA  ] RELATÓRIO  terminou na conexão #1
+[  379 ms] ➜ DESPACHO Req#13 [CRÍTICA] PAGAMENTO  espera=75ms  (restam 8 na fila)
+[  379 ms] ▶ Req#13 [CRÍTICA] PAGAMENTO  executando na conexão #1 (consultas ativas no servidor: 3)
+[  384 ms] ＋ Req#15 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 9)
+[  425 ms] ＋ Req#16 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 10)
+[  465 ms] ＋ Req#17 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  488 ms] ■ Req#09 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[  489 ms] ➜ DESPACHO Req#16 [CRÍTICA] PAGAMENTO  espera=65ms  (restam 10 na fila)
+[  489 ms] ▶ Req#16 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 3)
+[  499 ms] ■ Req#10 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[  499 ms] ➜ DESPACHO Req#07 [NORMAL ] CONSULTA   espera=435ms  (restam 9 na fila)
+[  499 ms] ▶ Req#07 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[  505 ms] ＋ Req#18 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 10)
+[  519 ms] ■ Req#13 [CRÍTICA] PAGAMENTO  terminou na conexão #1
+[  519 ms] ➜ DESPACHO Req#08 [NORMAL ] CONSULTA   espera=415ms  (restam 9 na fila)
+[  519 ms] ▶ Req#08 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[  545 ms] ＋ Req#19 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 10)
+[  585 ms] ＋ Req#20 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 11)
+[  593 ms] ■ Req#16 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[  594 ms] ➜ DESPACHO Req#04 [BAIXA  ] RELATÓRIO  espera=562ms  (restam 10 na fila)
+[  594 ms] ▶ Req#04 [BAIXA  ] RELATÓRIO  executando na conexão #2 (consultas ativas no servidor: 3)
+[  625 ms] ＋ Req#21 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 11)
+[  665 ms] ＋ Req#22 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 12)
+[  693 ms] ■ Req#08 [NORMAL ] CONSULTA   terminou na conexão #1
+[  694 ms] ➜ DESPACHO Req#14 [ALTA   ] LOGIN      espera=348ms  (restam 11 na fila)
+[  694 ms] ▶ Req#14 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[  705 ms] ＋ Req#23 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 12)
+[  708 ms] ■ Req#07 [NORMAL ] CONSULTA   terminou na conexão #3
+[  709 ms] ➜ DESPACHO Req#22 [CRÍTICA] PAGAMENTO  espera=44ms  (restam 11 na fila)
+[  709 ms] ▶ Req#22 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[  745 ms] ＋ Req#24 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 12)
+[  786 ms] ＋ Req#25 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 13)
+[  826 ms] ＋ Req#26 [ALTA   ] LOGIN      chegou à fila (tamanho da fila: 14)
+[  848 ms] ■ Req#14 [ALTA   ] LOGIN      terminou na conexão #1
+[  849 ms] ➜ DESPACHO Req#05 [BAIXA  ] RELATÓRIO  espera=805ms  (restam 13 na fila)
+[  849 ms] ▶ Req#05 [BAIXA  ] RELATÓRIO  executando na conexão #1 (consultas ativas no servidor: 3)
+[  866 ms] ＋ Req#27 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 14)
+[  875 ms] ■ Req#22 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[  876 ms] ➜ DESPACHO Req#06 [BAIXA  ] RELATÓRIO  espera=821ms  (restam 13 na fila)
+[  876 ms] ▶ Req#06 [BAIXA  ] RELATÓRIO  executando na conexão #3 (consultas ativas no servidor: 3)
+[  898 ms] ■ Req#04 [BAIXA  ] RELATÓRIO  terminou na conexão #2
+[  898 ms] ➜ DESPACHO Req#11 [NORMAL ] CONSULTA   espera=674ms  (restam 12 na fila)
+[  898 ms] ▶ Req#11 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[  906 ms] ＋ Req#28 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 13)
+[  946 ms] ＋ Req#29 [CRÍTICA] PAGAMENTO  chegou à fila (tamanho da fila: 14)
+[  986 ms] ＋ Req#30 [NORMAL ] CONSULTA   chegou à fila (tamanho da fila: 15)
+[ 1041 ms] ■ Req#11 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1041 ms] ➜ DESPACHO Req#12 [NORMAL ] CONSULTA   espera=777ms  (restam 14 na fila)
+[ 1041 ms] ▶ Req#12 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1180 ms] ■ Req#12 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1180 ms] ➜ DESPACHO Req#15 [NORMAL ] CONSULTA   espera=796ms  (restam 13 na fila)
+[ 1180 ms] ▶ Req#15 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1249 ms] ■ Req#05 [BAIXA  ] RELATÓRIO  terminou na conexão #1
+[ 1250 ms] ➜ DESPACHO Req#17 [ALTA   ] LOGIN      espera=785ms  (restam 12 na fila)
+[ 1250 ms] ▶ Req#17 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1270 ms] ■ Req#06 [BAIXA  ] RELATÓRIO  terminou na conexão #3
+[ 1270 ms] ➜ DESPACHO Req#18 [NORMAL ] CONSULTA   espera=765ms  (restam 11 na fila)
+[ 1270 ms] ▶ Req#18 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1390 ms] ■ Req#17 [ALTA   ] LOGIN      terminou na conexão #1
+[ 1390 ms] ➜ DESPACHO Req#19 [ALTA   ] LOGIN      espera=845ms  (restam 10 na fila)
+[ 1391 ms] ▶ Req#19 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1392 ms] ■ Req#15 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1392 ms] ➜ DESPACHO Req#20 [NORMAL ] CONSULTA   espera=807ms  (restam 9 na fila)
+[ 1392 ms] ▶ Req#20 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1402 ms] ■ Req#18 [NORMAL ] CONSULTA   terminou na conexão #3
+[ 1402 ms] ➜ DESPACHO Req#21 [ALTA   ] LOGIN      espera=777ms  (restam 8 na fila)
+[ 1402 ms] ▶ Req#21 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1494 ms] ■ Req#19 [ALTA   ] LOGIN      terminou na conexão #1
+[ 1494 ms] ➜ DESPACHO Req#23 [ALTA   ] LOGIN      espera=789ms  (restam 7 na fila)
+[ 1495 ms] ▶ Req#23 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1535 ms] ■ Req#21 [ALTA   ] LOGIN      terminou na conexão #3
+[ 1535 ms] ➜ DESPACHO Req#24 [ALTA   ] LOGIN      espera=790ms  (restam 6 na fila)
+[ 1535 ms] ▶ Req#24 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1563 ms] ■ Req#20 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1564 ms] ➜ DESPACHO Req#25 [NORMAL ] CONSULTA   espera=778ms  (restam 5 na fila)
+[ 1564 ms] ▶ Req#25 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1599 ms] ■ Req#23 [ALTA   ] LOGIN      terminou na conexão #1
+[ 1600 ms] ➜ DESPACHO Req#26 [ALTA   ] LOGIN      espera=774ms  (restam 4 na fila)
+[ 1600 ms] ▶ Req#26 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1665 ms] ■ Req#24 [ALTA   ] LOGIN      terminou na conexão #3
+[ 1665 ms] ➜ DESPACHO Req#27 [CRÍTICA] PAGAMENTO  espera=799ms  (restam 3 na fila)
+[ 1669 ms] ▶ Req#27 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1706 ms] ■ Req#26 [ALTA   ] LOGIN      terminou na conexão #1
+[ 1706 ms] ➜ DESPACHO Req#28 [NORMAL ] CONSULTA   espera=800ms  (restam 2 na fila)
+[ 1706 ms] ▶ Req#28 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 3)
+[ 1771 ms] ■ Req#25 [NORMAL ] CONSULTA   terminou na conexão #2
+[ 1771 ms] ➜ DESPACHO Req#29 [CRÍTICA] PAGAMENTO  espera=825ms  (restam 1 na fila)
+[ 1772 ms] ▶ Req#29 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 3)
+[ 1818 ms] ■ Req#27 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[ 1818 ms] ➜ DESPACHO Req#30 [NORMAL ] CONSULTA   espera=832ms  (restam 0 na fila)
+[ 1819 ms] ▶ Req#30 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 3)
+[ 1838 ms] ■ Req#28 [NORMAL ] CONSULTA   terminou na conexão #1
+[ 1917 ms] ■ Req#29 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[ 1989 ms] ■ Req#30 [NORMAL ] CONSULTA   terminou na conexão #3
+
+--- Resumo (Cenário 3 — Prioridade + envelhecimento (aging)) ---
+Limite do servidor ................ 3 conexões simultâneas
+Pico de consultas simultâneas ..... 3
+Estouros do limite ................ 0
+Colisões (2+ threads na mesma conexão) 0
+Resultados corrompidos/misturados . 0
+Veredito: ✔ seção crítica protegida — nenhuma violação.
+
+--- Métricas (Prioridade + envelhecimento (aging)) ---
+Tempo total (makespan) .......... 1989 ms
+Throughput ...................... 15.1 req/s
+Utilização das conexões ......... 95.7 %
+Espera média / máxima ........... 553 ms / 845 ms
+Turnaround médio ................ 743 ms
+
+Ordem em que receberam conexão (C=crítica A=alta N=normal B=baixa):
+    #01B #02B #03B #09C #10C #13C #16C #07N #08N #04B #14A #22C #05B #06B #11N 
+    #12N #15N #17A #18N #19A #20N #21A #23A #24A #25N #26A #27C #28N #29C #30N
+
+==============================================================================
+COMPARATIVO DAS POLÍTICAS — espera média na fila (ms) por classe de prioridade
+==============================================================================
+Política                                  CRÍT    ALTA  NORMAL   BAIXA | BAIXAmáx  turnarnd    req/s  util%
+----------------------------------------------------------------------------------------------------------------
+FCFS (ordem de chegada)                    793     822     785     208 |      409       873     14.7   94.4
+Prioridade estática                         83      77     682     754 |     1540       606     15.1   95.9
+SJF (consulta mais curta primeiro)         152     153     523     753 |     1567       586     14.9   94.7
+Prioridade + envelhecimento (aging)        315     730     708     365 |      821       743     15.1   95.7
+(BAIXAmáx = maior espera de uma requisição de baixa prioridade; indica starvation)

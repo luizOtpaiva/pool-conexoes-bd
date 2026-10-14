@@ -1,0 +1,103 @@
+
+==============================================================================
+CENÁRIO 1 — SEM CONTROLE (20 requisições simultâneas, limite do servidor = 3)
+==============================================================================
+[   62 ms] ⚠ ESTOURO DE LIMITE: Req#18 [ALTA   ] LOGIN      entrou com 18 consultas ativas (limite = 3)
+[   63 ms] ⚠ ESTOURO DE LIMITE: Req#20 [CRÍTICA] PAGAMENTO  entrou com 19 consultas ativas (limite = 3)
+[   64 ms] ⚠ ESTOURO DE LIMITE: Req#05 [ALTA   ] LOGIN      entrou com 6 consultas ativas (limite = 3)
+[   64 ms] ⚠ ESTOURO DE LIMITE: Req#17 [ALTA   ] LOGIN      entrou com 17 consultas ativas (limite = 3)
+[   67 ms] ⚠ ESTOURO DE LIMITE: Req#16 [ALTA   ] LOGIN      entrou com 16 consultas ativas (limite = 3)
+[   67 ms] ⚠ ESTOURO DE LIMITE: Req#15 [BAIXA  ] RELATÓRIO  entrou com 15 consultas ativas (limite = 3)
+[   70 ms] ⚠ ESTOURO DE LIMITE: Req#08 [NORMAL ] CONSULTA   entrou com 11 consultas ativas (limite = 3)
+[   70 ms] ⚠ COLISÃO na conexão #2: Req#08 [NORMAL ] CONSULTA   entrou enquanto outra consulta ainda a usava
+[   70 ms] ⚠ ESTOURO DE LIMITE: Req#10 [NORMAL ] CONSULTA   entrou com 9 consultas ativas (limite = 3)
+[   71 ms] ⚠ COLISÃO na conexão #3: Req#10 [NORMAL ] CONSULTA   entrou enquanto outra consulta ainda a usava
+[   71 ms] ⚠ ESTOURO DE LIMITE: Req#11 [CRÍTICA] PAGAMENTO  entrou com 10 consultas ativas (limite = 3)
+[   72 ms] ⚠ COLISÃO na conexão #1: Req#11 [CRÍTICA] PAGAMENTO  entrou enquanto outra consulta ainda a usava
+[   75 ms] ⚠ ESTOURO DE LIMITE: Req#09 [NORMAL ] CONSULTA   entrou com 8 consultas ativas (limite = 3)
+[   76 ms] ⚠ COLISÃO na conexão #2: Req#09 [NORMAL ] CONSULTA   entrou enquanto outra consulta ainda a usava
+[   77 ms] ▶ Req#01 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 1)
+[   77 ms] ▶ Req#09 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 8)
+[   78 ms] ⚠ ESTOURO DE LIMITE: Req#06 [NORMAL ] CONSULTA   entrou com 5 consultas ativas (limite = 3)
+[   78 ms] ▶ Req#11 [CRÍTICA] PAGAMENTO  executando na conexão #1 (consultas ativas no servidor: 10)
+[   78 ms] ⚠ ESTOURO DE LIMITE: Req#12 [ALTA   ] LOGIN      entrou com 12 consultas ativas (limite = 3)
+[   79 ms] ⚠ COLISÃO na conexão #3: Req#12 [ALTA   ] LOGIN      entrou enquanto outra consulta ainda a usava
+[   79 ms] ▶ Req#12 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 12)
+[   79 ms] ⚠ ESTOURO DE LIMITE: Req#13 [NORMAL ] CONSULTA   entrou com 13 consultas ativas (limite = 3)
+[   79 ms] ⚠ COLISÃO na conexão #1: Req#13 [NORMAL ] CONSULTA   entrou enquanto outra consulta ainda a usava
+[   80 ms] ▶ Req#13 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 13)
+[   83 ms] ▶ Req#08 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 11)
+[   84 ms] ⚠ COLISÃO na conexão #1: Req#16 [ALTA   ] LOGIN      entrou enquanto outra consulta ainda a usava
+[   84 ms] ▶ Req#16 [ALTA   ] LOGIN      executando na conexão #1 (consultas ativas no servidor: 16)
+[   85 ms] ▶ Req#10 [NORMAL ] CONSULTA   executando na conexão #3 (consultas ativas no servidor: 9)
+[   85 ms] ⚠ COLISÃO na conexão #2: Req#06 [NORMAL ] CONSULTA   entrou enquanto outra consulta ainda a usava
+[   85 ms] ⚠ COLISÃO na conexão #2: Req#17 [ALTA   ] LOGIN      entrou enquanto outra consulta ainda a usava
+[   86 ms] ▶ Req#17 [ALTA   ] LOGIN      executando na conexão #2 (consultas ativas no servidor: 17)
+[   86 ms] ⚠ COLISÃO na conexão #3: Req#18 [ALTA   ] LOGIN      entrou enquanto outra consulta ainda a usava
+[   86 ms] ▶ Req#18 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 18)
+[   86 ms] ⚠ ESTOURO DE LIMITE: Req#14 [ALTA   ] LOGIN      entrou com 14 consultas ativas (limite = 3)
+[   87 ms] ⚠ ESTOURO DE LIMITE: Req#07 [NORMAL ] CONSULTA   entrou com 7 consultas ativas (limite = 3)
+[   89 ms] ⚠ COLISÃO na conexão #2: Req#14 [ALTA   ] LOGIN      entrou enquanto outra consulta ainda a usava
+[   89 ms] ⚠ COLISÃO na conexão #3: Req#05 [ALTA   ] LOGIN      entrou enquanto outra consulta ainda a usava
+[   90 ms] ▶ Req#05 [ALTA   ] LOGIN      executando na conexão #3 (consultas ativas no servidor: 6)
+[   90 ms] ▶ Req#06 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 5)
+[   90 ms] ▶ Req#04 [CRÍTICA] PAGAMENTO  executando na conexão #3 (consultas ativas no servidor: 3)
+[   90 ms] ⚠ ESTOURO DE LIMITE: Req#03 [NORMAL ] CONSULTA   entrou com 4 consultas ativas (limite = 3)
+[   91 ms] ▶ Req#02 [NORMAL ] CONSULTA   executando na conexão #2 (consultas ativas no servidor: 2)
+[   91 ms] ⚠ COLISÃO na conexão #1: Req#20 [CRÍTICA] PAGAMENTO  entrou enquanto outra consulta ainda a usava
+[   91 ms] ⚠ COLISÃO na conexão #3: Req#15 [BAIXA  ] RELATÓRIO  entrou enquanto outra consulta ainda a usava
+[   92 ms] ⚠ ESTOURO DE LIMITE: Req#19 [CRÍTICA] PAGAMENTO  entrou com 20 consultas ativas (limite = 3)
+[   92 ms] ▶ Req#15 [BAIXA  ] RELATÓRIO  executando na conexão #3 (consultas ativas no servidor: 15)
+[   92 ms] ▶ Req#20 [CRÍTICA] PAGAMENTO  executando na conexão #1 (consultas ativas no servidor: 19)
+[   93 ms] ⚠ COLISÃO na conexão #1: Req#03 [NORMAL ] CONSULTA   entrou enquanto outra consulta ainda a usava
+[   93 ms] ▶ Req#14 [ALTA   ] LOGIN      executando na conexão #2 (consultas ativas no servidor: 14)
+[   93 ms] ▶ Req#03 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 4)
+[   94 ms] ⚠ COLISÃO na conexão #1: Req#07 [NORMAL ] CONSULTA   entrou enquanto outra consulta ainda a usava
+[   94 ms] ▶ Req#07 [NORMAL ] CONSULTA   executando na conexão #1 (consultas ativas no servidor: 7)
+[   94 ms] ⚠ COLISÃO na conexão #2: Req#19 [CRÍTICA] PAGAMENTO  entrou enquanto outra consulta ainda a usava
+[   95 ms] ▶ Req#19 [CRÍTICA] PAGAMENTO  executando na conexão #2 (consultas ativas no servidor: 20)
+[  200 ms] ⚠ DADOS MISTURADOS: Req#16 [ALTA   ] LOGIN      esperava 'RESULTADO_DA_REQ_16' mas leu 'RESULTADO_DA_REQ_7'
+[  200 ms] ■ Req#16 [ALTA   ] LOGIN      terminou na conexão #1
+[  202 ms] ⚠ DADOS MISTURADOS: Req#05 [ALTA   ] LOGIN      esperava 'RESULTADO_DA_REQ_5' mas leu 'RESULTADO_DA_REQ_15'
+[  202 ms] ■ Req#05 [ALTA   ] LOGIN      terminou na conexão #3
+[  202 ms] ⚠ DADOS MISTURADOS: Req#12 [ALTA   ] LOGIN      esperava 'RESULTADO_DA_REQ_12' mas leu 'RESULTADO_DA_REQ_15'
+[  202 ms] ■ Req#12 [ALTA   ] LOGIN      terminou na conexão #3
+[  209 ms] ■ Req#19 [CRÍTICA] PAGAMENTO  terminou na conexão #2
+[  212 ms] ⚠ DADOS MISTURADOS: Req#11 [CRÍTICA] PAGAMENTO  esperava 'RESULTADO_DA_REQ_11' mas leu 'RESULTADO_DA_REQ_7'
+[  212 ms] ■ Req#11 [CRÍTICA] PAGAMENTO  terminou na conexão #1
+[  212 ms] ⚠ DADOS MISTURADOS: Req#01 [ALTA   ] LOGIN      esperava 'RESULTADO_DA_REQ_1' mas leu 'RESULTADO_DA_REQ_7'
+[  213 ms] ■ Req#01 [ALTA   ] LOGIN      terminou na conexão #1
+[  221 ms] ⚠ DADOS MISTURADOS: Req#14 [ALTA   ] LOGIN      esperava 'RESULTADO_DA_REQ_14' mas leu 'RESULTADO_DA_REQ_19'
+[  222 ms] ■ Req#14 [ALTA   ] LOGIN      terminou na conexão #2
+[  224 ms] ⚠ DADOS MISTURADOS: Req#17 [ALTA   ] LOGIN      esperava 'RESULTADO_DA_REQ_17' mas leu 'RESULTADO_DA_REQ_19'
+[  225 ms] ■ Req#17 [ALTA   ] LOGIN      terminou na conexão #2
+[  227 ms] ■ Req#07 [NORMAL ] CONSULTA   terminou na conexão #1
+[  229 ms] ⚠ DADOS MISTURADOS: Req#04 [CRÍTICA] PAGAMENTO  esperava 'RESULTADO_DA_REQ_4' mas leu 'RESULTADO_DA_REQ_15'
+[  229 ms] ■ Req#04 [CRÍTICA] PAGAMENTO  terminou na conexão #3
+[  237 ms] ⚠ DADOS MISTURADOS: Req#20 [CRÍTICA] PAGAMENTO  esperava 'RESULTADO_DA_REQ_20' mas leu 'RESULTADO_DA_REQ_7'
+[  237 ms] ■ Req#20 [CRÍTICA] PAGAMENTO  terminou na conexão #1
+[  241 ms] ⚠ DADOS MISTURADOS: Req#08 [NORMAL ] CONSULTA   esperava 'RESULTADO_DA_REQ_8' mas leu 'RESULTADO_DA_REQ_19'
+[  241 ms] ■ Req#08 [NORMAL ] CONSULTA   terminou na conexão #2
+[  246 ms] ⚠ DADOS MISTURADOS: Req#18 [ALTA   ] LOGIN      esperava 'RESULTADO_DA_REQ_18' mas leu 'RESULTADO_DA_REQ_15'
+[  247 ms] ■ Req#18 [ALTA   ] LOGIN      terminou na conexão #3
+[  255 ms] ⚠ DADOS MISTURADOS: Req#02 [NORMAL ] CONSULTA   esperava 'RESULTADO_DA_REQ_2' mas leu 'RESULTADO_DA_REQ_19'
+[  256 ms] ■ Req#02 [NORMAL ] CONSULTA   terminou na conexão #2
+[  272 ms] ⚠ DADOS MISTURADOS: Req#06 [NORMAL ] CONSULTA   esperava 'RESULTADO_DA_REQ_6' mas leu 'RESULTADO_DA_REQ_19'
+[  273 ms] ■ Req#06 [NORMAL ] CONSULTA   terminou na conexão #2
+[  290 ms] ⚠ DADOS MISTURADOS: Req#13 [NORMAL ] CONSULTA   esperava 'RESULTADO_DA_REQ_13' mas leu 'RESULTADO_DA_REQ_7'
+[  290 ms] ■ Req#13 [NORMAL ] CONSULTA   terminou na conexão #1
+[  298 ms] ⚠ DADOS MISTURADOS: Req#10 [NORMAL ] CONSULTA   esperava 'RESULTADO_DA_REQ_10' mas leu 'RESULTADO_DA_REQ_15'
+[  300 ms] ⚠ DADOS MISTURADOS: Req#09 [NORMAL ] CONSULTA   esperava 'RESULTADO_DA_REQ_9' mas leu 'RESULTADO_DA_REQ_19'
+[  300 ms] ⚠ DADOS MISTURADOS: Req#03 [NORMAL ] CONSULTA   esperava 'RESULTADO_DA_REQ_3' mas leu 'RESULTADO_DA_REQ_7'
+[  300 ms] ■ Req#10 [NORMAL ] CONSULTA   terminou na conexão #3
+[  303 ms] ■ Req#09 [NORMAL ] CONSULTA   terminou na conexão #2
+[  304 ms] ■ Req#03 [NORMAL ] CONSULTA   terminou na conexão #1
+[  399 ms] ■ Req#15 [BAIXA  ] RELATÓRIO  terminou na conexão #3
+
+--- Resumo (Cenário 1 — sem controle) ---
+Limite do servidor ................ 3 conexões simultâneas
+Pico de consultas simultâneas ..... 20
+Estouros do limite ................ 17
+Colisões (2+ threads na mesma conexão) 17
+Resultados corrompidos/misturados . 17
+Veredito: ✘ seção crítica DESPROTEGIDA — houve violações.

@@ -1,0 +1,103 @@
+
+==============================================================================
+CENÁRIO 3 — política: FCFS (ordem de chegada)
+==============================================================================
+
+--- Resumo (Cenário 3 — FCFS (ordem de chegada)) ---
+Limite do servidor ................ 3 conexões simultâneas
+Pico de consultas simultâneas ..... 3
+Estouros do limite ................ 0
+Colisões (2+ threads na mesma conexão) 0
+Resultados corrompidos/misturados . 0
+Veredito: ✔ seção crítica protegida — nenhuma violação.
+
+--- Métricas (FCFS (ordem de chegada)) ---
+Tempo total (makespan) .......... 2012 ms
+Throughput ...................... 14.9 req/s
+Utilização das conexões ......... 95.1 %
+Espera média / máxima ........... 645 ms / 845 ms
+Turnaround médio ................ 837 ms
+
+Ordem em que receberam conexão (C=crítica A=alta N=normal B=baixa):
+    #01B #03B #02B #04B #05B #06B #07N #08N #09C #10C #11N #12N #13C #14A #15N 
+    #16C #17A #18N #19A #20N #21A #22C #23A #24A #25N #26A #27C #28N #29C #30N
+
+==============================================================================
+CENÁRIO 3 — política: Prioridade estática
+==============================================================================
+
+--- Resumo (Cenário 3 — Prioridade estática) ---
+Limite do servidor ................ 3 conexões simultâneas
+Pico de consultas simultâneas ..... 3
+Estouros do limite ................ 0
+Colisões (2+ threads na mesma conexão) 0
+Resultados corrompidos/misturados . 0
+Veredito: ✔ seção crítica protegida — nenhuma violação.
+
+--- Métricas (Prioridade estática) ---
+Tempo total (makespan) .......... 2021 ms
+Throughput ...................... 14.8 req/s
+Utilização das conexões ......... 94.2 %
+Espera média / máxima ........... 416 ms / 1575 ms
+Turnaround médio ................ 606 ms
+
+Ordem em que receberam conexão (C=crítica A=alta N=normal B=baixa):
+    #01B #02B #03B #09C #10C #13C #16C #14A #17A #19A #21A #07N #22C #23A #24A 
+    #27C #26A #29C #08N #11N #12N #15N #18N #20N #25N #28N #30N #04B #05B #06B
+
+==============================================================================
+CENÁRIO 3 — política: SJF (consulta mais curta primeiro)
+==============================================================================
+
+--- Resumo (Cenário 3 — SJF (consulta mais curta primeiro)) ---
+Limite do servidor ................ 3 conexões simultâneas
+Pico de consultas simultâneas ..... 3
+Estouros do limite ................ 0
+Colisões (2+ threads na mesma conexão) 0
+Resultados corrompidos/misturados . 0
+Veredito: ✔ seção crítica protegida — nenhuma violação.
+
+--- Métricas (SJF (consulta mais curta primeiro)) ---
+Tempo total (makespan) .......... 2005 ms
+Throughput ...................... 15.0 req/s
+Utilização das conexões ......... 94.8 %
+Espera média / máxima ........... 395 ms / 1563 ms
+Turnaround médio ................ 585 ms
+
+Ordem em que receberam conexão (C=crítica A=alta N=normal B=baixa):
+    #01B #02B #03B #10C #09C #12N #16C #13C #18N #19A #21A #17A #11N #23A #24A 
+    #26A #27C #28N #14A #29C #22C #30N #20N #08N #25N #07N #15N #04B #06B #05B
+
+==============================================================================
+CENÁRIO 3 — política: Prioridade + envelhecimento (aging)
+==============================================================================
+
+--- Resumo (Cenário 3 — Prioridade + envelhecimento (aging)) ---
+Limite do servidor ................ 3 conexões simultâneas
+Pico de consultas simultâneas ..... 3
+Estouros do limite ................ 0
+Colisões (2+ threads na mesma conexão) 0
+Resultados corrompidos/misturados . 0
+Veredito: ✔ seção crítica protegida — nenhuma violação.
+
+--- Métricas (Prioridade + envelhecimento (aging)) ---
+Tempo total (makespan) .......... 1994 ms
+Throughput ...................... 15.0 req/s
+Utilização das conexões ......... 95.3 %
+Espera média / máxima ........... 544 ms / 832 ms
+Turnaround médio ................ 734 ms
+
+Ordem em que receberam conexão (C=crítica A=alta N=normal B=baixa):
+    #01B #02B #03B #09C #10C #13C #16C #07N #08N #04B #14A #22C #05B #06B #11N 
+    #12N #15N #17A #18N #19A #20N #21A #23A #24A #25N #26A #27C #28N #29C #30N
+
+==============================================================================
+COMPARATIVO DAS POLÍTICAS — espera média na fila (ms) por classe de prioridade
+==============================================================================
+Política                                  CRÍT    ALTA  NORMAL   BAIXA | BAIXAmáx  turnarnd    req/s  util%
+----------------------------------------------------------------------------------------------------------------
+FCFS (ordem de chegada)                    751     788     749     182 |      365       837     14.9   95.1
+Prioridade estática                         89      78     677     754 |     1575       606     14.8   94.2
+SJF (consulta mais curta primeiro)         164     140     521     752 |     1563       585     15.0   94.8
+Prioridade + envelhecimento (aging)        307     719     699     361 |      819       734     15.0   95.3
+(BAIXAmáx = maior espera de uma requisição de baixa prioridade; indica starvation)
